@@ -1,0 +1,20 @@
+[package]
+name = "vtid"
+version = "0.1.1"
+edition = "2021"
+description = "A Rust library for generating volatile type IDs"
+authors = ["Zakarum <zaq.dev@icloud.com>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/zakarumych/vtid"
+documentation = "https://docs.rs/vtid"
+keywords = ["type-id", "versioning", "type-system"]
+categories = ["development-tools", "rust-patterns", "no-std"]
+
+[features]
+derive = ["dep:vtid-proc"]
+
+[dependencies]
+vtid-proc = { version = "=0.1.1", optional = true, path = "proc" }
+
+[workspace]
+members = ["proc"]
